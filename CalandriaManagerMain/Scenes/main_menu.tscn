@@ -35,6 +35,26 @@ text = "Agregar Filamento"
 script = ExtResource("2_48xlc")
 sceneToShow = ExtResource("4_n45e2")
 
+[node name="Stockfilament" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Stock Filamentos"
+
+[node name="ItemStock" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Stock impresos"
+
+[node name="Orders" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Ordenes activas"
+
+[node name="Sales History" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Historial ventas"
+
+[node name="Print" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Imprimir"
+
 [node name="MainScreen" type="ScrollContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
