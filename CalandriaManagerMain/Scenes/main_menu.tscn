@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdq7amc3o3lis"]
+
+[ext_resource type="Script" uid="uid://ch1a4cnmec4f7" path="res://Scripts/Responsive.gd" id="1_28flt"]
+[ext_resource type="Script" uid="uid://b8uy6ggbljuqi" path="res://Scripts/SideButton.gd" id="2_48xlc"]
+[ext_resource type="Script" uid="uid://b2wlf4pu1owxl" path="res://Scripts/Manager.gd" id="2_n45e2"]
+[ext_resource type="PackedScene" uid="uid://bomkmtii20boc" path="res://Scenes/add_item_stock.tscn" id="3_ce3w2"]
+[ext_resource type="PackedScene" uid="uid://dy7fe2bhdg1ye" path="res://Scenes/add_filment.tscn" id="4_n45e2"]
+[ext_resource type="Script" uid="uid://dmywhjrsp4qwg" path="res://Scripts/MainScreenManager.gd" id="6_opfnp"]
+
+[node name="MainMenu" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("2_n45e2")
+
+[node name="SideMenu" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="AddItem" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Agregar Item"
+script = ExtResource("2_48xlc")
+sceneToShow = ExtResource("3_ce3w2")
+
+[node name="AddFilament" type="Button" parent="HBoxContainer/SideMenu"]
+layout_mode = 2
+text = "Agregar Filamento"
+script = ExtResource("2_48xlc")
+sceneToShow = ExtResource("4_n45e2")
+
+[node name="MainScreen" type="ScrollContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_opfnp")
+
+[node name="Control" type="Control" parent="HBoxContainer/MainScreen"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
