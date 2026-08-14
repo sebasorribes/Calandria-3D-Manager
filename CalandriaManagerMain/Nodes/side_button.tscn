@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbkbh8cblplrq"]
+
+[ext_resource type="Script" uid="uid://b8uy6ggbljuqi" path="res://Scripts/SideButton.gd" id="1_hg778"]
+
+[node name="SideButton" type="Button"]
+text = "Side Button"
+script = ExtResource("1_hg778")

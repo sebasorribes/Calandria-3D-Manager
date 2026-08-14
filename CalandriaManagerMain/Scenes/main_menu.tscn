@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdq7amc3o3lis"]
+[gd_scene load_steps=8 format=3 uid="uid://bdq7amc3o3lis"]
 
 [ext_resource type="Script" uid="uid://ch1a4cnmec4f7" path="res://Scripts/Responsive.gd" id="1_28flt"]
-[ext_resource type="Script" uid="uid://b8uy6ggbljuqi" path="res://Scripts/SideButton.gd" id="2_48xlc"]
 [ext_resource type="Script" uid="uid://b2wlf4pu1owxl" path="res://Scripts/Manager.gd" id="2_n45e2"]
 [ext_resource type="PackedScene" uid="uid://bomkmtii20boc" path="res://Scenes/add_item_stock.tscn" id="3_ce3w2"]
+[ext_resource type="PackedScene" uid="uid://cbkbh8cblplrq" path="res://Nodes/side_button.tscn" id="3_cp0ys"]
 [ext_resource type="PackedScene" uid="uid://dy7fe2bhdg1ye" path="res://Scenes/add_filment.tscn" id="4_n45e2"]
+[ext_resource type="PackedScene" uid="uid://cn6i0uyoylti1" path="res://Scenes/ActiveOrders.tscn" id="4_yhxw7"]
 [ext_resource type="Script" uid="uid://dmywhjrsp4qwg" path="res://Scripts/MainScreenManager.gd" id="6_opfnp"]
 
 [node name="MainMenu" type="PanelContainer"]
@@ -23,16 +24,19 @@ script = ExtResource("2_n45e2")
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="AddItem" type="Button" parent="HBoxContainer/SideMenu"]
+[node name="Orders" parent="HBoxContainer/SideMenu" instance=ExtResource("3_cp0ys")]
+layout_mode = 2
+text = "Pedidos activos"
+sceneToShow = ExtResource("4_yhxw7")
+
+[node name="AddItem" parent="HBoxContainer/SideMenu" instance=ExtResource("3_cp0ys")]
 layout_mode = 2
 text = "Agregar Item"
-script = ExtResource("2_48xlc")
 sceneToShow = ExtResource("3_ce3w2")
 
-[node name="AddFilament" type="Button" parent="HBoxContainer/SideMenu"]
+[node name="AddFilament" parent="HBoxContainer/SideMenu" instance=ExtResource("3_cp0ys")]
 layout_mode = 2
 text = "Agregar Filamento"
-script = ExtResource("2_48xlc")
 sceneToShow = ExtResource("4_n45e2")
 
 [node name="Stockfilament" type="Button" parent="HBoxContainer/SideMenu"]
@@ -42,10 +46,6 @@ text = "Stock Filamentos"
 [node name="ItemStock" type="Button" parent="HBoxContainer/SideMenu"]
 layout_mode = 2
 text = "Stock impresos"
-
-[node name="Orders" type="Button" parent="HBoxContainer/SideMenu"]
-layout_mode = 2
-text = "Ordenes activas"
 
 [node name="Sales History" type="Button" parent="HBoxContainer/SideMenu"]
 layout_mode = 2

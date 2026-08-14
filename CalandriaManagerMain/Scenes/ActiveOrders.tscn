@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn6i0uyoylti1"]
+
+[ext_resource type="Script" uid="uid://62yy5w5caika" path="res://Scripts/ActivesOrders/ActivesOrdersManager.gd" id="1_yu3gt"]
+
+[node name="ActiveOrders" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yu3gt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01890298, 0.073357336, 0, 1)
+
+[node name="ActiveOrdersScreen" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ClientName" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/ClientName"]
+layout_mode = 2
+text = "Nombre cliente
+"
+horizontal_alignment = 1
+
+[node name="ProductDescriptiveName" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/ProductDescriptiveName"]
+layout_mode = 2
+text = "Descripcion producto
+"
+horizontal_alignment = 1
+
+[node name="Check" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/Check"]
+layout_mode = 2
+text = "Costo
+"
+horizontal_alignment = 1
+
+[node name="EstimatedDate" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/EstimatedDate"]
+layout_mode = 2
+text = "Fecha entrega aproximada
+"
+horizontal_alignment = 1
+
+[node name="Product" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/Product"]
+layout_mode = 2
+text = "Producto asignado
+"
+horizontal_alignment = 1
+
+[node name="Delivered" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/Delivered"]
+layout_mode = 2
+text = "Entregado
+"
+horizontal_alignment = 1
+
+[node name="Paid" type="VBoxContainer" parent="ActiveOrdersScreen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ActiveOrdersScreen/Paid"]
+layout_mode = 2
+text = "Pagando
+"
+horizontal_alignment = 1
